@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private LinearLayout linearLayout;
-    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
