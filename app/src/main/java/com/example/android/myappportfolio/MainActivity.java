@@ -21,39 +21,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        Button button;
+        final String text = "This button will launch ";
+        String msg = null;
         switch (view.getId()) {
             case R.id.spotify_button:
                 button = (Button) linearLayout.findViewById(R.id.spotify_button);
+                msg = text + button.getText().toString();
                 break;
             case R.id.scores_button:
                 button = (Button) linearLayout.findViewById(R.id.scores_button);
+                msg = text + button.getText().toString();
                 break;
             case R.id.library_button:
                 button = (Button) linearLayout.findViewById(R.id.library_button);
+                msg = text + button.getText().toString();
                 break;
             case R.id.bigeer_button:
                 button = (Button) linearLayout.findViewById(R.id.bigeer_button);
+                msg = text + button.getText().toString();
                 break;
             case R.id.xyz_button:
                 button = (Button) linearLayout.findViewById(R.id.xyz_button);
+                msg = text + button.getText().toString();
                 break;
             case R.id.capstone_button:
                 button = (Button) linearLayout.findViewById(R.id.capstone_button);
+                msg = text + button.getText().toString();
                 break;
         }
-        builtMessage();
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
     }
-
-        public void builtMessage() {
-            final String text = "This button will launch ";
-            final String msg = text + button.getText().toString();
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(MainActivity.this, msg, Toast.LENGTH_LONG).show();
-                }
-            });
-        }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
